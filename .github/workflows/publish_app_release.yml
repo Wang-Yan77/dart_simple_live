@@ -1,7 +1,8 @@
 name: app-build-action
-#推送Tag时触发
+# 提交代码/推送Tag都触发
 on:
   push:
+    branches: [ master ]  # 新增：提交代码到master就触发
     tags:
       - "v*"
 jobs:
